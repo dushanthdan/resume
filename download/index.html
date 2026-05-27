@@ -1,1 +1,26 @@
-<a href="https://dushanthdan.github.io/resume/resume.pdf" download>Downloading Resume PDF</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Downloading Dan's Resume...</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <p>If your download doesn't start automatically, <a href="https://dushanthdan.github.io/resume/resume.pdf" download="Dushanth_Mahendran_Resume.pdf">click here</a>.</p>
+    
+    <script>
+        window.onload = function() {
+            // This creates a temporary hidden link
+            var link = document.createElement('a');
+            link.href = 'https://dushanthdan.github.io/resume/resume.pdf'; 
+            
+            // This forces the download and suggests a clean file name
+            link.download = 'Dushanth_Mahendran_Resume.pdf'; 
+            
+            // This virtually "clicks" the link for the user
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
+</body>
+</html>
